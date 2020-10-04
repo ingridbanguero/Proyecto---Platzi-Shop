@@ -29,16 +29,16 @@ export class ProductComponent implements /* OnChanges */DoCheck, OnInit, OnDestr
         console.log('ngOnChanges');
         console.log(changes);
     } */
-    ngOnInit(){ // Se ejecuta cuando el componente fue puesto en pantalla
+    ngOnInit(): void{ // Se ejecuta cuando el componente fue puesto en pantalla
         console.log('ngOnInit');
     }
-    ngDoCheck(){ // No funciona si esta OnChanges, ya que ambos detectan camibos
+    ngDoCheck(): void{ // No funciona si esta OnChanges, ya que ambos detectan camibos
         console.log('ngDoCheck');
     }
-    ngOnDestroy(){
+    ngOnDestroy(): void{
         console.log('ngOnDestroy');
     }
-    addCart(){
+    addCart(): void{
         console.log('Agregado al carrito');
         this.productClicked.emit(this.product.id);
     }

@@ -54,13 +54,13 @@ export class AppComponent {
     }
   ];
   /* Añadir items */
-  addItem(){
+  addItem(): void{
     this.items.push('Nuevo item');
   }
-  deleteItem(index: number){ // Tipaje con TS
+  deleteItem(index: number): void{ // Tipaje con TS
     this.items.splice(index, 1);
   }
-  clickProduct(id: number){
+  clickProduct(id: number): void{
     console.log('product');
     console.log(id);
   }
