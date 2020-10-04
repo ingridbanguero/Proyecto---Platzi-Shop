@@ -22,6 +22,7 @@ export class ProductComponent implements /* OnChanges */DoCheck, OnInit, OnDestr
     @Input() product: Product;
     @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
+    today = new Date();
     constructor(){ // Cuantas veces se ejecuta mi constructor
         console.log('Mi Constructor');
     }
