@@ -7,13 +7,17 @@ import { FormsModule } from '@angular/forms'; // Componentes importados
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product.component';
-import { CartComponent } from './cart/cart.component'; // Modulo importando
+import { CartComponent } from './cart/cart.component';
+import { ExponentialPipe } from './exponential.pipe';
+import { HighlightDirective } from './highlight.directive'; // Modulo importando
 
 @NgModule({
   declarations: [ // Nuestros componentes
     AppComponent,
     ProductComponent,
-    CartComponent // Agrego mi modulo creado (contiene las variables a usar)
+    CartComponent,
+    ExponentialPipe,
+    HighlightDirective // Agrego mi modulo creado (contiene las variables a usar)
   ],
   imports: [ // Nuestros modulos
     BrowserModule,

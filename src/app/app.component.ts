@@ -9,6 +9,7 @@ export class AppComponent {
   /* Variables que puedo renderizar en mi html */
   title = 'platzi-store';
   items = ['Ingrid', 'Fernanda', 'Banguero'];
+  power = 10;
   products: Product[] = [
     {
       id: '1',
