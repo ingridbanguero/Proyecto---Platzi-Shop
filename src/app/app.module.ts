@@ -9,7 +9,10 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component';
 import { ExponentialPipe } from './exponential.pipe';
-import { HighlightDirective } from './highlight.directive'; // Modulo importando
+import { HighlightDirective } from './highlight.directive';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component'; // Modulo importando
 
 @NgModule({
   declarations: [ // Nuestros componentes
@@ -17,7 +20,10 @@ import { HighlightDirective } from './highlight.directive'; // Modulo importando
     ProductComponent,
     CartComponent,
     ExponentialPipe,
-    HighlightDirective // Agrego mi modulo creado (contiene las variables a usar)
+    HighlightDirective,
+    HomeComponent,
+    ProductsComponent,
+    ContactComponent // Agrego mi modulo creado (contiene las variables a usar)
   ],
   imports: [ // Nuestros modulos
     BrowserModule,
