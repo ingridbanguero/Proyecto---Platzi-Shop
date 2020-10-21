@@ -17,7 +17,8 @@ import { DemoComponent } from './demo/demo.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; // Modulo importando
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component'; // Modulo importando
 
 @NgModule({
   declarations: [ // Nuestros componentes
@@ -33,7 +34,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     FooterComponent,
     BannerComponent,
-    PageNotFoundComponent // Agrego mi modulo creado (contiene las variables a usar)
+    PageNotFoundComponent,
+    ProductDetailComponent // Agrego mi modulo creado (contiene las variables a usar)
   ],
   imports: [ // Nuestros modulos
     BrowserModule,
