@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 // Traemos cada uno de nuestros componentes creados
-import { ProductsComponent } from './products/products.component';
-import { ContactComponent } from './contact/contact.component';
 import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductDetailComponent} from './product-detail/product-detail.component';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { LayoutComponent} from './layout/layout.component'
 const routes: Routes = [
@@ -25,15 +22,13 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
-      },
-      {
-        path: 'products/:id', // Mando mi parametro dinamico
-        component: ProductDetailComponent
+        loadChildren: () => import ('./products/products.module').then(m => m.ProductsModule)
+        /* component: ProductsComponent */
       },
       {
         path: 'contact',
-        component: ContactComponent
+        loadChildren: () => import ('./contact/contact.module').then(m => m.ContactModule)
+        /* component: ContactComponent */
       },
     ]
   },
