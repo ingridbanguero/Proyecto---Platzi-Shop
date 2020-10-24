@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 // Traemos cada uno de nuestros componentes creados
-import { DemoComponent } from './demo/demo.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
 import { LayoutComponent} from './layout/layout.component'
@@ -36,7 +35,8 @@ const routes: Routes = [
       },
       {
         path: 'demo',
-        component: DemoComponent
+        /* component: DemoComponent */
+        loadChildren: () => import ('./demo/demo.module').then(m => m.DemoModule)
       },
     ]
   },

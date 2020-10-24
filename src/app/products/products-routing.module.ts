@@ -9,7 +9,7 @@ const routes: Routes = [
         component: ProductsComponent
     },
     {
-        path: 'products/:id', // Mando mi parametro dinamico
+        path: ':id', // Mando mi parametro dinamico
         component: ProductDetailComponent
     },
 ];

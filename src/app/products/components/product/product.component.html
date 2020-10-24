@@ -3,7 +3,7 @@
 <strong>{{ product.price | currency}}</strong>
 <p> {{product.description | slice:0:10 }} </p>
 <p> {{today | date:'HH:MM'}}</p>
-<button (click)="addCart()">Añadir al carrito</button>
+<button mat-raised-button color="primary" (click)="addCart()">Añadir al carrito</button>
 <a [routerLink]="['/products', product.id]">Ver detalle</a>
 
 
