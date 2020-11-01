@@ -11,7 +11,7 @@ import { CartComponent } from './cart/cart.component';
 
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LayoutComponent } from './layout/layout.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Modulo importando
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [ // Nuestros componentes
