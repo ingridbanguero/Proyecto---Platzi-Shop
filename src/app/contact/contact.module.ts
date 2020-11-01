@@ -4,6 +4,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
 import { SharedModule} from './../shared/shared.module'
 
+import { MaterialModule } from './../material/material.module';
+
 @NgModule({
   declarations: [
     ContactComponent
@@ -11,7 +13,8 @@ import { SharedModule} from './../shared/shared.module'
   imports: [
     CommonModule,
     ContactRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ]
 })
 export class ContactModule { }
