@@ -32,4 +32,34 @@ export class ProductDetailComponent implements OnInit {
       this.product = product;
     })
   }
+
+  createProduct(){
+    const newProduct: Product = {
+      id: "222",
+      title: "Nuevo desde angular",
+      image: "assets/images/banner-1.jpg",
+      price: 30000,
+      description: "Nuevo Producto"
+    }
+    this.productsService.createProduct(newProduct)
+    .subscribe( product => {
+      console.log(product);
+    })
+  }
+  updateProduct(){
+    const updateProduct: Partial<Product> = {
+      price: 555,
+      description: "Edicion titulo"
+    }
+    this.productsService.updateProduct('222', updateProduct)
+    .subscribe( product => {
+      console.log(product);
+    })
+  }
+  deleteProduct(){
+    this.productsService.deleteProduct('222')
+    .subscribe(rta => {
+      console.log(rta);
+    })
+  }   
 }
